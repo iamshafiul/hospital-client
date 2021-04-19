@@ -1,0 +1,23 @@
+.contactUs{
+    background-image: url('../../../images/chairBg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+  
+}
+
+.contactUs::after{
+    position: absolute;
+    content: "";
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: .5;
+}
+
+.contactUs .contactUs-text{
+    position: relative;
+    z-index: 123;
+}

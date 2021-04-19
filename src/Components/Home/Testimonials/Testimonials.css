@@ -1,0 +1,9 @@
+@media (max-width: 575px) {
+  img.img-fluid.me-2 {
+    margin: 0 !important;
+    margin-right: 36px !important;
+  }
+  .testimonial-content {
+    margin-top: 20px;
+  }
+}

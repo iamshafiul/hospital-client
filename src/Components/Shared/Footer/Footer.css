@@ -1,0 +1,29 @@
+.social_icon ul li a{
+    border: 1px solid #ddd;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    line-height: 40px;
+    text-align: center;
+    margin-right: 5px;
+    
+}
+.social_icon ul li a{
+    display: inline-block;
+    transition: .4s;
+}
+.social_icon ul li:hover a{
+    background:#000;
+    color: #fff;
+}
+
+
+@media (max-width: 575px) {
+    .col-md-3.col-sm-6 {
+        text-align: center;
+    }
+    .social_icon {
+        display: flex;
+        justify-content: center;
+    }
+  }
