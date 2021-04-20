@@ -13,7 +13,7 @@ const Admin = () => {
       description: data.description,
       imageURL: imageURL
     };
-    const url = `http://localhost:5000/addService`;
+    const url = `https://quiet-caverns-85312.herokuapp.com/addService`;
     fetch(url, {
       method: "POST",
       headers: {

@@ -8,8 +8,8 @@ import Login from "./Components/Login/Login/Login";
 import Order from "./Components/Order/Order/Order";
 import Admin from "./Components/Admin/Admin/Admin";
 import Services from "./Components/Home/Services/Services";
+import OrderList from "./Components/OrderList/OrderList/OrderList";
 // import PrivateRoute from "./Components/PrivateRoute/PrivateRoute/PrivateRoute";
-// import AddEvents from "./Components/Admin/Admin/Admin";
 
 export const UserContext = createContext();
 
@@ -19,6 +19,9 @@ function App() {
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <Router>
         <Switch>
+        <Route path="/home">
+            <Home></Home>
+          </Route>
           <Route exact path="/">
             <Home />
           </Route>
@@ -28,10 +31,13 @@ function App() {
           <Route path="/login">
             <Login></Login>
           </Route>
+          <Route path="/service/:serviceId">
+            <OrderList></OrderList>
+          </Route>
           <Route path="/order">
             <Order></Order>
           </Route>
-          <Route path="/service">
+          <Route path="/services">
             <Services></Services>
           </Route>
         </Switch>

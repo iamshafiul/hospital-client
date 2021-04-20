@@ -25,7 +25,7 @@ function Login() {
   const history = useHistory();
   const location = useLocation();
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-  const { from } = location.state || { from: { pathname: "/" } };
+  const { from } = location.state || { from: { pathname: "/order" } };
 
   const googleSignIn = () => {
     handleSignIn().then((res) => {
@@ -133,20 +133,6 @@ function Login() {
           </Link>
         </Form.Group>
       </Form>
-      {/* <h2 className="text-center line">or</h2> */}
-      {/* <div className="google-login-button text-center">
-        {user.isSigned ? (
-          <button onClick={signOut}>
-            {" "}
-             sign out
-          </button>
-        ) : (
-          <button onClick={googleSignIn}>
-            {" "}
-             sign in
-          </button>
-        )}
-      </div> */}
       <p style={{ color: "red" }}>{user.error}</p>
       {user.success && <p style={{ color: "green" }}>User {newUser ? "Created" : "loged In"} Successfully</p>}
     </div>

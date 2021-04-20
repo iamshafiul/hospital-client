@@ -1,15 +1,12 @@
 import React from 'react';
-// import BusinessInfo from '../BusinessInfo/BusinessInfo';
+import Navigation from '../../Shared/Navigation/Navigation';
 import HeaderMain from '../HeaderMain/HeaderMain';
-import Navbar from '../../Shared/Navbar/Navbar';
 import './Header.css';
-
-
 
 const Header = () => {
     return (
         <div className="header-container">
-            <Navbar></Navbar>
+            <Navigation></Navigation>
             <HeaderMain></HeaderMain>
         </div>
     );

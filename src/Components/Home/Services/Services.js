@@ -2,11 +2,12 @@ import React, { useEffect, useState } from "react";
 import "./Services.css";
 import ServiceDetail from "../ServiceDetail/ServiceDetail";
 import { set } from "react-hook-form";
+import { Spinner } from "react-bootstrap";
 
 const Services = () => {
   const [services, setService] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/service")
+    fetch("https://quiet-caverns-85312.herokuapp.com/service")
       .then((res) => res.json())
       .then((data) => setService(data));
   }, []);
@@ -18,8 +19,9 @@ const Services = () => {
       </div>
       <div className="container">
         <div className="row gx-5">
+        {services.length === 0 && <Spinner animation="border" />}
           {services.map((service) => (
-            <ServiceDetail service={service}></ServiceDetail>
+            <ServiceDetail id={service._id} service={service}></ServiceDetail>
           ))}
         </div>
       </div>

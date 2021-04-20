@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ServiceDetail = ({ service }) => {
   return (
@@ -8,7 +9,7 @@ const ServiceDetail = ({ service }) => {
       <p>
        {service.description}
       </p>
-      <button className="btn btn-primary mt-5">Explore More</button>
+      <Link className="btn btn-primary buyBtn mt-5" to={`/service/${service._id}`}>Explore More</Link>
     </div>
   );
 };
